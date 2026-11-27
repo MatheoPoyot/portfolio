@@ -63,9 +63,21 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
           {children}
         </main>
 
-        <footer className="mx-auto flex w-full max-w-[1200px] flex-wrap justify-between gap-4 border-t border-line px-6 py-8 font-mono text-xs text-muted">
-          <span>© 2026 Mathéo Poyot</span>
-          <span>Next.js · Tailwind · construit avec Claude, relu ligne par ligne</span>
+        <footer className="mx-auto flex w-full max-w-[1200px] flex-col gap-4 border-t border-line px-6 py-8 font-mono text-xs text-muted">
+          {/* Lighthouse 12.6 mobile, 27/11/2026. Performance ajoutée une fois mesurée en ligne (lot 6). */}
+          <p className="flex flex-wrap justify-between gap-x-6 gap-y-2">
+            <span>
+              qualité mesurée · lighthouse mobile : accessibilité <span className="text-accent">100</span> · bonnes
+              pratiques <span className="text-accent">100</span> · seo <span className="text-accent">100</span>
+            </span>
+            <a href="https://github.com/MatheoPoyot/portfolio" className="inline-flex min-h-11 items-center text-accent hover:text-accent-soft sm:min-h-0">
+              code source sur github ↗
+            </a>
+          </p>
+          <p className="flex flex-wrap justify-between gap-x-6 gap-y-2">
+            <span>© 2026 Mathéo Poyot</span>
+            <span>Next.js · Tailwind · construit avec Claude, relu ligne par ligne</span>
+          </p>
         </footer>
       </body>
     </html>

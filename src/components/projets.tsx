@@ -1,6 +1,7 @@
 import Image from "next/image";
 import type { CSSProperties } from "react";
 import { PROJETS, type Projet } from "@/content/projets";
+import { Etiquette } from "@/components/accueil";
 import { TypedText } from "@/components/typed-text";
 
 function Fleche() {
@@ -61,9 +62,7 @@ function Carte({ projet }: { projet: Projet }) {
 export function Projets() {
   return (
     <section id="projets" className="mx-auto max-w-[1200px] scroll-mt-4 px-6 py-24">
-      <h2 className="font-mono text-[13px] font-normal text-muted">
-        <span aria-hidden="true">.</span>projets
-      </h2>
+      <Etiquette>projets</Etiquette>
       <ol className="mt-10 flex flex-col gap-16 lg:gap-24">
         {PROJETS.map((projet) => (
           <li

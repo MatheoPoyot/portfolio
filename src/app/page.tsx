@@ -1,6 +1,7 @@
 import fs from "node:fs";
 import path from "node:path";
 import Image from "next/image";
+import { APropos, Competences, Contact, Methode, Parcours } from "@/components/accueil";
 import { Projets } from "@/components/projets";
 import { Ticker } from "@/components/ticker";
 
@@ -72,6 +73,11 @@ export default function Home() {
 
       <Ticker />
       <Projets />
+      <Methode />
+      <Competences />
+      <Parcours />
+      <APropos />
+      <Contact />
     </>
   );
 }

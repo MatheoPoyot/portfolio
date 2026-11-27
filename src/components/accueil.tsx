@@ -12,7 +12,7 @@ export function Etiquette({ children }: { children: ReactNode }) {
   );
 }
 
-const PRINCIPES = [
+export const PRINCIPES = [
   { titre: "Je comprends", texte: "Aucune ligne générée n'est gardée sans que je sache l'expliquer." },
   { titre: "Je vérifie", texte: "Tests, relecture, sécurité et accessibilité passent avant la vitesse." },
   { titre: "Je décide", texte: "L'IA propose. Je choisis l'architecture, le design et ce qui part en ligne." },
@@ -35,7 +35,7 @@ export function Methode() {
   );
 }
 
-const COMPETENCES = [
+export const COMPETENCES = [
   { groupe: "Front", outils: ["HTML", "CSS", "JavaScript", "TypeScript", "React", "Next.js", "Tailwind"] },
   { groupe: "Back", outils: ["PHP", "Symfony", "API Platform", "Node.js", "Express", "PostgreSQL", "SQLite"] },
   { groupe: "Design", outils: ["Photoshop", "Illustrator", "Premiere Pro", "UX pédagogique"] },
@@ -62,10 +62,10 @@ export function Competences() {
   );
 }
 
-const PARCOURS = [
-  { dates: "2021 – 2024", titre: "Bac général, spécialité NSI", lieu: "Numérique et sciences informatiques" },
-  { dates: "2024 – 2027", titre: "BUT MMI", lieu: "IUT de Troyes" },
-  { dates: "depuis 2025", titre: "Développeur multimédia en alternance", lieu: "SDIS de la Marne, direction départementale" },
+export const PARCOURS = [
+  { type: "formation", dates: "2021 – 2024", titre: "Bac général, spécialité NSI", lieu: "Numérique et sciences informatiques" },
+  { type: "formation", dates: "2024 – 2027", titre: "BUT MMI", lieu: "IUT de Troyes" },
+  { type: "experience", dates: "depuis 2025", titre: "Développeur multimédia en alternance", lieu: "SDIS de la Marne, direction départementale" },
 ];
 
 export function Parcours() {
@@ -107,7 +107,7 @@ export function APropos() {
   );
 }
 
-const LIENS = [
+export const LIENS = [
   { label: "contact@matheopoyot.fr", href: "mailto:contact@matheopoyot.fr" },
   { label: "linkedin", href: "https://www.linkedin.com/in/matheo-poyot" },
   { label: "github", href: "https://github.com/MatheoPoyot" },

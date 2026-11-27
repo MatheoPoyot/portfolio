@@ -32,12 +32,12 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
       <body className="flex min-h-full flex-col font-sans">
         <a
           href="#contenu"
-          className="sr-only rounded-full bg-accent px-4 py-2 font-semibold text-black focus:not-sr-only focus:fixed focus:left-4 focus:top-4 focus:z-50"
+          className="sr-only rounded-full bg-accent px-4 py-2 font-semibold text-black focus:not-sr-only focus:fixed focus:left-4 focus:top-4 focus:z-50 print:hidden"
         >
           Aller au contenu
         </a>
 
-        <header className="mx-auto flex w-full max-w-[1200px] flex-wrap items-center justify-between gap-x-4 border-b border-line px-6 py-3">
+        <header className="mx-auto flex w-full max-w-[1200px] flex-wrap items-center justify-between gap-x-4 border-b border-line px-6 py-3 print:hidden">
           <Link href="/" className="inline-flex min-h-11 items-center text-[15px] font-semibold">
             Mathéo Poyot
           </Link>
@@ -51,7 +51,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
                 </li>
               ))}
               <li>
-                <a href="/cv" className="inline-flex min-h-11 items-center text-accent transition-colors hover:text-accent-soft">
+                <a href="/cv/" className="inline-flex min-h-11 items-center text-accent transition-colors hover:text-accent-soft">
                   cv ↓
                 </a>
               </li>
@@ -63,7 +63,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
           {children}
         </main>
 
-        <footer className="mx-auto flex w-full max-w-[1200px] flex-col gap-4 border-t border-line px-6 py-8 font-mono text-xs text-muted">
+        <footer className="mx-auto flex w-full max-w-[1200px] flex-col gap-4 border-t border-line px-6 py-8 font-mono text-xs text-muted print:hidden">
           {/* Lighthouse 12.6 mobile, 27/11/2026. Performance ajoutée une fois mesurée en ligne (lot 6). */}
           <p className="flex flex-wrap justify-between gap-x-6 gap-y-2">
             <span>

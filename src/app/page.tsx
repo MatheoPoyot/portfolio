@@ -1,6 +1,7 @@
 import fs from "node:fs";
 import path from "node:path";
 import Image from "next/image";
+import { Projets } from "@/components/projets";
 import { Ticker } from "@/components/ticker";
 
 // Checked at build time (static export): drop public/photo.jpg and rebuild to show the portrait.
@@ -70,6 +71,7 @@ export default function Home() {
       </section>
 
       <Ticker />
+      <Projets />
     </>
   );
 }

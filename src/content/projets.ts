@@ -22,7 +22,7 @@ export const PROJETS: Projet[] = [
       "Quiz en direct gratuit. L'animateur projette les questions sur le grand écran, jusqu'à une centaine de joueurs répondent sur leur téléphone. Équipes, bibliothèque de quiz partagés, modération, en français et en anglais.",
     stack: ["Node.js", "Socket.IO", "React", "PostgreSQL"],
     couleurs: { fond: "#FFD23F", texte: "#1A1A2E", teinte: "#FFD23F" },
-    visuel: { src: "/projets/kaboom.jpg", format: "ordi" },
+    visuel: { src: "/projets/kaboom.webp", format: "ordi" },
     lien: "https://kaboom.matheopoyot.fr",
   },
   {
@@ -34,7 +34,7 @@ export const PROJETS: Projet[] = [
       "Le site d'annonces de l'école : les parents donnent ou revendent les fournitures de leurs enfants. Recherche par établissement, alertes, messagerie avec signalement, modération et pages légales.",
     stack: ["Node.js", "PostgreSQL", "React", "shadcn/ui"],
     couleurs: { fond: "#1F4B43", texte: "#FBF8F0", teinte: "#8FD3B6" },
-    visuel: { src: "/projets/seconde-classe.jpg", format: "ordi" },
+    visuel: { src: "/projets/seconde-classe.webp", format: "ordi" },
   },
   {
     slug: "enasis",
@@ -55,7 +55,7 @@ export const PROJETS: Projet[] = [
       "Refonte du portfolio de compétences des étudiants de l'IUT de Troyes, en équipe de trois. Je suis le product owner, seul contact du client, et je développe l'API.",
     stack: ["Symfony", "API Platform", "PostgreSQL", "Nuxt"],
     couleurs: { fond: "#4D3677", texte: "#FFFFFF", teinte: "#CFC2EC" },
-    visuel: { src: "/projets/unifolio.jpg", format: "ordi" },
+    visuel: { src: "/projets/unifolio.webp", format: "ordi" },
   },
   {
     slug: "restaurant-cms",
@@ -76,6 +76,6 @@ export const PROJETS: Projet[] = [
       "Des jeux d'ambiance sans alcool pour les soirées entre potes : un seul téléphone qu'on se passe, ou chacun le sien avec un code de salle. Un joueur qui perd le réseau retrouve sa place.",
     stack: ["Node.js", "Socket.IO", "React", "Vite"],
     couleurs: { fond: "#F472B6", texte: "#1A1033", teinte: "#F472B6" },
-    visuel: { src: "/projets/games.jpg", format: "mobile", fondMobile: "#0E1022" },
+    visuel: { src: "/projets/games.webp", format: "mobile", fondMobile: "#0E1022" },
   },
 ];

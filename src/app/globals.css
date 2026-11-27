@@ -60,6 +60,18 @@ body {
   color: #fff;
 }
 
+/* Page /cv : une feuille A4 sans marge, le fond noir du site n'est pas imprimé. */
+@page {
+  size: A4;
+  margin: 0;
+}
+
+@media print {
+  body {
+    background: #fff;
+  }
+}
+
 ::selection {
   background: var(--color-accent);
   color: #000;

@@ -1,10 +1,11 @@
 import Image from "next/image";
+import Link from "next/link";
 import type { CSSProperties } from "react";
 import { PROJETS, type Projet } from "@/content/projets";
 import { Etiquette } from "@/components/accueil";
 import { TypedText } from "@/components/typed-text";
 
-function Fleche() {
+export function Fleche() {
   return (
     <svg viewBox="0 0 24 24" className="size-10 shrink-0 transition-transform duration-300 group-hover:translate-x-1 group-hover:-translate-y-1 sm:size-12" fill="none" stroke="currentColor" strokeWidth="2.25" aria-hidden="true">
       <path d="M7 17 17 7M8 7h9v9" />
@@ -12,7 +13,7 @@ function Fleche() {
   );
 }
 
-function Visuel({ projet }: { projet: Projet }) {
+export function Visuel({ projet }: { projet: Projet }) {
   const v = projet.visuel!;
   const alt = `Capture d'écran de ${projet.titre}`;
   if (v.format === "mobile") {
@@ -38,7 +39,7 @@ function Carte({ projet }: { projet: Projet }) {
       </div>
       <div className="mt-4 flex items-start justify-between gap-6">
         <h3 className="text-[clamp(2.25rem,5vw,4rem)] leading-[1.02] font-medium tracking-[-0.03em]">{projet.titre}</h3>
-        {projet.lien && <Fleche />}
+        {projet.etude && <Fleche />}
       </div>
       {projet.visuel && (
         <div className="mt-6 border-t border-current/20 pt-6">
@@ -49,11 +50,11 @@ function Carte({ projet }: { projet: Projet }) {
   );
 
   const classes = "group block rounded-2xl bg-(--fond) p-6 text-(--texte) sm:p-8";
-  return projet.lien ? (
-    <a href={projet.lien} target="_blank" rel="noopener noreferrer" className={classes}>
+  return projet.etude ? (
+    <Link href={`/projets/${projet.slug}`} className={classes}>
       {contenu}
-      <span className="sr-only"> (voir le site, nouvel onglet)</span>
-    </a>
+      <span className="sr-only"> : lire l&apos;étude de cas</span>
+    </Link>
   ) : (
     <div className={classes}>{contenu}</div>
   );
